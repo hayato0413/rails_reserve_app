@@ -1,0 +1,26 @@
+
+<div class="sign_container">
+  <% if @user.present? %>
+    <%= render 'layouts/error_messages', model: @user %>
+  <% end %>
+  <div class="sign_box">
+    <p id="sign_title">ログイン</p>
+
+    <div class="sign_form">
+      <%= form_tag("/user/login") do %>
+        <div class="sign_email">
+          <p class="needed">必須</p>
+          <input type="email" name="email" placeholder="メールアドレス">
+        </div>
+        <div class="sign_password">
+          <p class="needed">必須</p> 
+          <input type="password" name="password" placeholder="パスワード">
+        </div>
+        <input type="submit" value="ログイン">
+      <% end %>
+    </div>
+
+    <a href="/user/sign_up">新しいアカウントを作成</a>
+
+  </div>
+</div>

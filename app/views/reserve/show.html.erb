@@ -1,0 +1,30 @@
+
+<div class="show_room_container">
+  <div class="show_room_title">
+    <p>登録済みルーム一覧</p>
+  </div>
+  <div class="show_room_table">
+    <table>
+      <thead>
+        <tr class="show_room_table_head">
+          <th>ルーム画像</th>
+          <th>ルーム名</th>
+          <th>ルーム紹介</th>
+          <th>料金</th>
+          <th>作成日</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @houses.each do |house|%>
+          <tr class="show_room_table_body">
+            <td><img src="<%= "/house_img/#{house.roomname}" %>"></td>
+            <td><%= link_to("#{house.roomname}", "/reserve/#{house.id}") %></td>
+            <td><%= house.roomtext %></td>
+            <td>¥<%= house.price %></td>
+            <td><%= house.created_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

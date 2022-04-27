@@ -1,0 +1,66 @@
+.new_room_container {
+  display: flex;
+  width: 100%;
+  background: #f6f8f9;
+}
+.new_room_view {
+  margin: 50px auto;
+  background: white;
+}
+.new_room_content {
+  padding: 10px;
+  border: 1px solid #e2e2e2;
+  width: 850px;
+}
+
+.new_room_title {
+  border-bottom: 1px solid #ced4da;
+  padding: 20px 0 30px 10px;
+  font-size: 22px;
+
+}
+
+.new_room_form_content {
+  display: flex;
+  padding: 20px 0 40px 20px;
+  border-bottom: 1px solid #ced4da;
+  justify-content: space-between;
+  
+}
+
+.new_room_label {
+  display: flex;
+}
+
+.new_room_label .needed {
+  margin-left: 5px;
+}
+
+.new_room_input_filed {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 2px 10px;
+  width: 70%;
+}
+
+.new_room_introduce textarea {
+  height: 150px;
+}
+
+.new_room_img {
+  justify-content: start;
+}
+.new_room_img input {
+  margin-left: 115px;
+}
+
+.new_room_button {
+  border: none;
+  margin: 20px 0 20px 20px;
+}
+.new_room_button input[type="submit"] {
+  background: #4a90e2;
+  padding: 8px 55px;
+  color: white;
+  border-radius: 0.25rem;
+}

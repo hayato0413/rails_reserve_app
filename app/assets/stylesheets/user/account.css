@@ -1,0 +1,47 @@
+
+.account_container {
+  margin: auto;
+  height: 80vh;
+  width: 50%;
+}
+.account_content {
+  margin-top: 50px;
+  border: 1px solid #eaedef;
+  padding: 20px;
+  margin-bottom: 80px;
+  background: white; 
+}
+.account_title {
+  border-bottom: 1px solid #eaedef;
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+.account_email, .account_password {
+  display: flex;
+  border-bottom: 1px solid #eaedef;
+  /* font-size: 11px; */
+  padding: 20px 0 20px 20px;
+  align-items: center;
+}
+.account_email h2 {
+  padding-right: 90px;
+  font-size: 16px;
+}
+.account_password h2 {
+  padding-right: 123px;
+  font-size: 16px;
+}
+.account_password p {
+  font-size: 20px;
+}
+
+.account_button {
+  padding: 30px 0 10px 20px;
+}
+.account_button a{
+  text-decoration: none;
+  color: white;
+  background: #4a90e2;
+  padding: 10px 60px;
+  border-radius: 0.25rem;
+}

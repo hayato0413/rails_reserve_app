@@ -1,0 +1,58 @@
+<%= render 'layouts/error_messages', model: @room %>
+<div class="new_room_container">
+  <div class="config_menu_box">
+    <p>基本情報</p>
+  </div>
+  <div class="new_room_view">
+    <div class="new_room_content">
+      
+      <div class="new_room_title">
+        <p>ルーム情報登録</p>
+      </div>
+
+      <div class="new_room_form">
+        <%= form_tag("/reserve/create", {multipart: true}) do %>
+          <div class="new_room_name new_room_form_content">
+            <div class="new_room_label">
+              <p>ルーム名</p>
+              <p class="needed">必須</p>
+            </div>
+            <input type="text" name="roomname" class="new_room_input_filed">
+          </div>
+          <div class="new_room_introduce new_room_form_content">
+            <div class="new_room_label">
+              <p>ルーム紹介</p>
+              <p class="needed">必須</p>
+            </div>
+            <input type="text" name="roomtext" class="new_room_input_filed">
+          </div>
+          <div class="new_room_price new_room_form_content">
+            <div class="new_room_label">
+              <p>料金</p>
+              <p class="needed">必須</p>
+            </div>
+            <input type="number" name="price" class="new_room_input_filed">
+          </div>
+          <div class="new_room_address new_room_form_content">
+            <div class="new_room_label">
+              <p>住所</p>
+              <p class="needed">必須</p>
+            </div>
+            <input type="text" name="adress" class="new_room_input_filed">
+          </div>
+          <div class="new_room_img new_room_form_content">
+            <div class="new_room_label">
+              <p>ルーム画像</p>
+              <p class="needed">必須</p>
+            </div>
+            <input type="file" name="img">
+          </div>
+          <div class="new_room_button">
+            <input type="submit" value="登録">
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

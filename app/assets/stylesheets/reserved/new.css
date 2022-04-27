@@ -1,0 +1,53 @@
+
+.reserved_form_container {
+  width: 100%;
+  padding: 30px;
+}
+.reserved_form_box {
+  margin: 0 auto;
+  width: 500px;
+  border: 1px solid #ced4de;
+  padding: 20px;
+}
+.reserved_form_content {
+  width: 100%;
+}
+.reserved_form_content input {
+  width: 100%;
+  border: 1px solid #ced4de;
+  background: #e9ecef;
+  border-radius: 0.25rem;
+  padding: 5px 12px;
+  margin: 5px 0 20px 0;
+}
+.reserved_form_title {
+  font-size: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ced4de;
+}
+.reserved_form_price {
+  padding: 10px 0;
+}
+.reserved_form_stay_days, .reserved_form_number_of_person, .reserved_form_sum_price{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ced4de;
+  margin-bottom: 10px;
+}
+.reserved_form_button input{
+  background: #4a90e2;
+  color: white;
+}
+
+.reserved_form_return_button {
+  width: 100%;
+  text-align: center;
+}
+.reserved_form_return {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: #6c757d;
+  padding: 8px 12px;
+  border-radius: 0.25rem;
+}

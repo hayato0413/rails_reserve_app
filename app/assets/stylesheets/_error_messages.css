@@ -1,0 +1,14 @@
+.alert_container {
+  margin: 0 auto 10px auto;
+  text-align: center;
+  list-style: none;
+  width: 100%;
+}
+.alert  {
+  background: #ff3333;
+  border-bottom: 1px solid black;
+  padding: 10px 0 10px 0;
+}
+.alert li {
+  color: white;
+}

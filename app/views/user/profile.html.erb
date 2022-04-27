@@ -1,0 +1,46 @@
+
+<div class="config_menu_container">
+  <%= render "shared/config_menu" %>
+  <div class="profile_container">
+    <%= render 'layouts/error_messages', model: @current_user %>
+    <div class="profile_content">
+
+      <div class="profile_title">
+        <p>プロフィール</p>
+      </div>
+      <div class="profile_img">
+        <% if @current_user.user_img == "defult_user_icon" %>
+          <img src="/assets/<%= @current_user.user_img %>">
+        <% else %>
+          <%= image_tag "/user_images/#{@current_user.user_img}" %>
+        <% end %>
+      </div>
+      <div class="profile_edit_form">
+        <%= form_tag("/user/#{@current_user.id}/update", {multipart: true}) do %>
+
+          <div class="profile_edit_img">
+            <h2>アイコン画像</h2>
+            <p class="needed">必須</p>
+            <input type="file" name="user_img" placeholder="アイコン画像をアップロード">
+          </div>
+          <div class="profile_edit_name">
+            <h2>名前</h2>
+            <p class="needed">必須</p>
+            <input type="text" name="name" placeholder="名前を入力" value="<%= @current_user.name %>">
+          </div>
+          <div class="profile_edit_introduce">
+            <h2>自己紹介</h2>
+            <p class="needed">必須</p>
+            <textarea name="introduce" placeholder="自己紹介を入力" ><%= @current_user.introduce %></textarea>
+          </div>
+          <div class="profile_edit_button">
+            <input type="submit" value="更新">
+          </div>
+
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+</div>
