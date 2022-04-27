@@ -1,0 +1,20 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 名前
+       password: パスワード
+       password_confirmation: 確認用パスワード
+       email: メールアドレス
+       user_img: プロフィール画像
+       introduce: 自己紹介
+     rent_house:
+       roomname: ルーム名
+       roomtext: ルーム紹介
+       price: 料金
+       adress: 住所
+       img: ルーム画像
+     reserved_room:
+       startday: 開始日
+       endday: 終了日
+       number_of_person: 人数

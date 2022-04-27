@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsReserveApp</title>
+    <title>RailsReservationSite</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="content">
+
+      <header>
+        <div class="header_container">
+
+          <div class="header_logo">
+            <a href="/">
+              <img id="header_logo" src="/assets/reservation_site_header-logo">
+            </a>   
+          </div>
+
+          <div class="search_areas">
+            <%= form_tag("/reserve/search", method: :get) do %>
+              <input type="text" placeholder="エリア" name="search_area">
+              <input type="text" placeholder="キーワード" name="search_key">
+              <input type="submit">
+            <% end %>
+          </div>
+
+          <div class="sign_buttons">
+            <% if session[:user_id].present? %>
+              <% current_user = User.find_by(id: session[:user_id]) %>
+              <div class="header_user_box">
+                <p><%= current_user.name %></p>              
+                <% if current_user.user_img == "defult_user_icon" %>
+                  <img id="user_img" src="/assets/<%= current_user.user_img %>">
+                <% else %>
+                  <%= image_tag "/user_images/#{current_user.user_img}", id: "user_img" %>
+                <% end %>
+              </div>
+              <ul id="hide_menu">
+                <li><%= link_to("ルーム登録", "/reserve/new") %></li>
+                <li><%= link_to("予約済みルーム一覧", "/reserved/show") %></li>
+                <li><%= link_to("登録済みルーム一覧", "/reserve/show") %></li>
+                <li><%= link_to("設定", "/user/account") %></li>
+                <li><%= link_to("ログアウト", "/user/logout") %></li>
+              </ul>
+            <% else %>
+              <a href="/user/sign_in" id="sign_in">ログイン</a>
+              <a href="/user/sign_up" id="sign_up">登録する</a>
+            <% end %>
+          </div>
+
+        </div>
+      </header>
+
+      <main>
+        <%= flash[:success] %>
+        <%= flash[:fail] %>
+        <%= yield %>
+      </main>
+      
+    </div>
+
+    <footer>
+      <p>&copy; 2022 POTEPAN.INC</p>
+    </footer>
   </body>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>

@@ -1,0 +1,33 @@
+
+
+<div class="sign_container">
+   <%= render 'layouts/error_messages', model: @user %>
+  <div class="sign_box">
+    <p id="sign_title">新しいアカウントを作成</p>
+
+    <div class="sign_form">
+      <%= form_tag( "/user/create") do %>
+        <div class="sign_user_name">
+          <p class="needed">必須</p>
+          <input type="text" name="name" placeholder="ユーザー名">
+        </div>
+        <div class="sign_email">
+          <p class="needed">必須</p>
+          <input type="email" name="email" placeholder="メールアドレス">
+        </div>
+        <div class="sign_password">
+          <p class="needed">必須</p> 
+          <input type="password" name="password" placeholder="パスワード">
+        </div>
+        <div class="sign_password">
+          <p class="needed">必須</p>           
+          <input type="password" name="password_confirmation" placeholder="パスワード確認"> 
+        </div>
+        <input type="submit" value="新しいアカウントを作成">
+      <% end %>
+    </div>
+
+    <a href="/user/sign_in">すでにアカウントをお持ちの方はこちら</a>
+
+  </div>
+</div>

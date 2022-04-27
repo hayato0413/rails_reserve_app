@@ -13,3 +13,109 @@
  *= require_tree .
  *= require_self
  */
+
+/* .wrapper {
+   
+} */
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+}
+
+header #header_logo {
+  margin-left: 30px;
+}
+
+header .search_areas {
+  display: flex;
+}
+header .search_areas input {
+  background: white;
+  padding: 7px;
+  border: solid 1px #6c757d;
+  margin-right: 5px;
+}
+header .search_areas input[type="submit"] {
+  display: none;
+
+}
+
+header .sign_buttons {
+  display: flex;
+  color: white;
+  margin-left: auto;
+}
+header .sign_buttons a {
+  text-decoration: none;
+  color: white;
+  padding: 7px 10px;
+  border-radius: 0.25rem;
+  margin-right: 15px;
+}
+header .sign_buttons #sign_in {
+  background: #4a90e2;
+}
+header .sign_buttons #sign_up {
+  background-color: #6c757d;
+}
+header .header_user_box {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+header .header_user_box img {
+  margin: 0 50px 0 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+#hide_menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 72px;
+  right: 10px;
+  background: white;
+  color: black;
+  padding: 20px 0 20px 20px;
+  width: 200px;
+}
+#hide_menu a {
+  text-decoration: none;
+  color: black;
+  padding: 0;
+}
+#hide_menu li {
+  margin-top: 10px;
+}
+#hide_menu li:first-child {
+  margin-top: 0;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 80px 0;
+}

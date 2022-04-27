@@ -1,0 +1,48 @@
+
+<div class="reserved_form_container">
+
+  <div class="reserved_form_box">
+
+    <div class="reserved_form_content">
+      <%= form_tag("/reserved/#{params[:id]}/create", method: :post) do %>
+        <div class="reserved_form_title">
+          <p>予約内容確認</p>
+        </div>
+        <div class="reserved_form_price">
+          <p><span class="room_price">¥<%= @room.price %></span> / 日</p>
+        </div>
+        <div class="reserved_form_startday">
+          <p>開始日</p>
+          <input type="text" readonly="readonly" value="<%= params[:startday] %>" name="startday">
+        </div>
+        <div class="reserved_form_endday">
+          <p>終了日</p>
+          <input type="text" readonly="readonly" value="<%= params[:endday] %>" name="endday">
+        </div>
+        <div class="reserved_form_stay_days">
+          <p>使用日数：<%= @sum_day %>日</p>
+        </div>
+        <div class="reserved_form_number_of_person">
+          <p>人数：<%= params[:number_of_person] %>人</p>
+          <input type="hidden" value="<%= params[:number_of_person] %>" name="number_of_person">
+        </div>
+        <div class="reserved_form_sum_price">
+          <p>合計金額</p>
+          <input type="text" readonly="readonly" value="<%= @sum_price %>" name="sum_price">
+          <p>
+            上記内容でよければ「予約を確定」を押してください
+          </p>
+        </div>
+        <div class="reserved_form_button">
+          <input type="submit" value="予約を確定">
+        </div>
+      <% end %>
+      <div class="reserved_form_return_button">
+        <a class="reserved_form_return" href="/reserve/<%= params[:id] %>">ルーム詳細に戻る</a>
+      </div>
+
+    </div>
+
+  
+  </div>
+</div>

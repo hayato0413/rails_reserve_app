@@ -1,0 +1,37 @@
+
+<div class="account_edit_container">
+  <%= render 'layouts/error_messages', model: @current_user %>
+  <div class="account_edit_content">
+    
+    <div class="account_edit_title">
+      <p>アカウント編集</p>
+    </div>
+
+    <%= form_with model: @current_user, url: "/user/#{@current_user.id}/update", method: :post, local: true do |f| %>
+      <div class="account_edit_email">
+        <p>メールアドレス</p>    
+        
+        <%= f.email_field :email, class: :form_part%>
+      </div>
+      <div class="account_edit_pass">
+        <p>変更後パスワード (変更する場合のみ入力)</p>
+        <%= f.password_field :password, class: :form_part%>
+      </div>
+      <div class="account_edit_re_pass">
+        <p>パスワード確認用 (変更する場合のみ入力)</p>
+        <%= f.password_field :password_confirmation, class: :form_part%>
+      </div>
+      <div class="account_edit_now_pass">
+        <p>現在のパスワード</p>
+        <input type="password" class="form_part" name="naw_password">
+      </div>
+      <div class="account_edit_button">
+        <%= f.submit value: :更新%>
+      </div>
+    <% end %>
+
+    <div class="account_edit_return_button">
+      <%= link_to("戻る", "/user/account") %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+
+.config_menu_container {
+  display: flex;
+  background: #f6f8f9;
+  height: 100%;
+}
+.config_menu_box {
+  /* margin: 50px 30px auto 30px; */
+  border-right: 3px solid #eaedef;
+  padding: 40px 50px;
+  /* padding-bottom: 10%; */
+  background: white;
+  width: 15%;
+}
+.config_menu_box li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.config_menu_box a {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,40 @@
+
+<%= render 'layouts/error_messages', model: @reserved %>
+<div class="room_detail_container">
+
+  <div class="room_detail_content">
+    <img src="<%= "/house_img/#{@room.roomname}" %>" class="room_detail_mainvisual">
+    <div class="room_detail_profile">
+      <img src="<%= "/user_images/#{@room.user_id}.jpg" %>">
+      <div class="room_detail_profile_imformation">
+        <h2><%= @room.roomname %></h2>
+        <p><%= @room.adress %></p>
+      </div>
+    </div>
+    <div class="room_detail_roomtext">
+      <p><%= @room.roomtext %></p>
+    </div>
+  </div>
+
+  <div class="room_detail_reserve_content">
+    <p class="room_reserve_form"><span class="room_price">¥<%= @room.price %></span> / 日</p>
+    <%= form_tag( "/reserved/#{params[:id]}/new", method: :get) do %>
+      <div class="room_detail_reserve_startday room_reserve_form">
+        <p>開始日</p>
+        <input type="date" name="startday">
+      </div>
+      <div class="room_detail_reserve_endday room_reserve_form">
+        <p>終了日</p>
+        <input type="date" name="endday">
+      </div>
+      <div class="room_detail_reserve_number_of_person room_reserve_form">
+        <p>人数</p>
+        <input type="number" name="number_of_person">
+      </div>
+      <div class="room_detail_reserve_button">
+        <input type="submit" value="予約する">
+      </div>
+    <% end %>
+  </div>
+
+</div>

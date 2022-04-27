@@ -1,0 +1,34 @@
+
+<div class="show_room_container">
+  <div class="show_room_title">
+    <p>予約済みルーム一覧</p>
+  </div>
+  <div class="show_room_table">
+    <table>
+      <thead>
+        <tr class="show_room_table_head">
+          <th>ルーム画像</th>
+          <th>ルーム名</th>
+          <th>ルーム紹介</th>
+          <th>合計料金</th>
+          <th>開始日</th>
+          <th>終了日</th>
+          <th>予約確定日時</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reserves.each do |reserve|%>
+          <tr class="show_room_table_body">
+            <td><img src="<%= "/house_img/#{reserve.roomname}" %>"></td>
+            <td><%= link_to("#{reserve.roomname}", "/reserve/#{reserve.room_id}") %></td>
+            <td><%= reserve.roomtext %></td>
+            <td>¥<%= reserve.sum_price %></td>
+            <td><%= reserve.startday %></td>
+            <td><%= reserve.endday %></td>
+            <td><%= reserve.created_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

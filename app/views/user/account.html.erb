@@ -1,0 +1,29 @@
+
+<div class="config_menu_container">
+
+  <%= render "shared/config_menu"%>
+
+  <div class="account_container">
+    <div class="account_content">
+      <div class="account_title">
+        <p>アカウント</p>
+      </div>
+      <div class="account_row">
+
+        <div class="account_email">
+          <h2>メールアドレス</h2>
+          <p><%= @current_user.email %></p>
+        </div>
+        <div class="account_password">
+          <h2>パスワード</h2>
+          <p>* * * * * * *</p>
+        </div>
+        <div class="account_button">
+          <%= link_to("編集", "/user/edit" ) %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

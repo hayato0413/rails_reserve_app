@@ -1,0 +1,86 @@
+.top_main {
+  background-image: url("/assets/img_top_backgrond");
+  background-size: cover;
+  min-height: 80vh;
+}
+.form_box {
+  padding: 180px 0 0px 150px;
+}
+.form_area {
+  background-color: white;
+  width: 40%;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 0.3em;
+}
+.form_area form {
+  display: flex;
+  flex-direction: column;
+}
+.form_area p {
+  font-weight:lighter;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.form_area input[type="text"] {
+  border: 1px solid #ced4da;
+  padding: 7px 10px;
+  border-radius: 0.2em;
+  margin-top: 10px;
+}
+.form_area input[type="submit"] {
+  background-color: #4a90E2;
+  color: white;
+  text-align: center;
+  margin: 20px 0 20px 0;
+  padding: 7px 0;
+  border-radius: 0.2em;
+}
+#form_title {
+  font-weight: bold;
+}
+
+
+.top_bottom {
+  margin: 40px auto;
+}
+.recomend_area {
+  margin: 0 auto;
+  width: 1000px;
+}
+.img_row {
+  display: flex;
+  text-align: center;
+  margin-top: 30px;
+}
+.img_recomend span{
+  position: absolute;
+  bottom: 40px;
+  left: 35%;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+  z-index: 1;
+  text-align: center;
+}
+.img_recomend {
+  width: 25%;
+  padding-right: 30px;
+  text-align: center;
+  position: relative;
+}
+.img_recomend img {
+  width: 100%;
+  height: 350px;
+  border-radius: 0.2em;
+  object-fit: cover;
+}
+
+.flash_message {
+  background: #ee3333;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}

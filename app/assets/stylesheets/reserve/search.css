@@ -1,0 +1,55 @@
+
+.search_container {
+  padding: 30px 20px 30px 100px;
+  width: 100%;
+}
+
+
+.data_count {
+  padding-bottom: 30px;
+  font-size: 24px;
+}
+
+
+.houses_table {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.house_data {
+  width: 22%;
+  height: 350px;
+  border: solid 1px #ced4da;
+  margin: 0 30px 10px 0;
+}
+.house_data a {
+  text-decoration: none;
+  color: black;
+}
+.house_data img {
+  object-fit: cover;
+  width: 100%;
+  height: 55%;
+  margin: 20px 0 10px 0;
+}
+
+
+.house_data_text {
+  padding: 0 15px;
+}
+.house_data_text #roomname {
+  font-size: 18px;
+  color: #909090;
+  font-weight: bold;
+  padding-bottom: 5px;
+  text-decoration: none!important;
+}
+.house_data_text h2 {
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.house_data_text #room_price {
+  text-align: right;
+}

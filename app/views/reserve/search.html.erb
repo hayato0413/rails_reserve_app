@@ -1,0 +1,21 @@
+
+<div class="search_container">
+  <div class="data_count">
+    <p>検索結果：<%= @houses.size %>件</p>
+  </div>
+
+  <div class="houses_table">
+    <% @houses.each do |house| %>
+      <div class="house_data">
+        <a href=<%= "/reserve/#{house.id}" %>>
+          <img src="<%= "/house_img/#{house.roomname}" %>">
+          <div class="house_data_text">
+            <p id="roomname"><%= house.roomname %></p>
+            <h2><%= house.adress %></h2>
+            <p id="room_price">¥<%= house.price %></p>
+          </div>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

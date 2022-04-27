@@ -1,0 +1,62 @@
+
+<div class="wrapper">
+  <div class="home_top">
+    <% if flash[:error].present? %>
+      <div class="flash_message">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <div class="top_main">
+      <div class="form_box">
+        <div class="form_area">
+          <p>
+            <span id="form_title">Potepan Share</span>でまだ体験したことのない旅をしよう
+          </p>
+          <%= form_tag("/reserve/search", method: :get) do %>
+            <label>エリア</label>
+            <input type="text" placeholder="東京" name="search_area">
+            <input type="submit" value="探す">
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="top_bottom">
+      <div class="recomend_area">
+
+        <h2>
+          おすすめのエリア
+        </h2>
+
+        <div class="img_row">
+          <div class="img_recomend">
+            <span>東京</span>
+            <a href="/reserve/search?search_area=東京">
+              <img src="/assets/img_tokyo">
+            </a>
+          </div>
+          <div class="img_recomend">
+            <span>大阪</span>
+            <a href="/reserve/search?search_area=大阪">
+              <img src="/assets/img_osaka">
+            </a>
+          </div>
+          <div class="img_recomend">
+            <span>京都</span>
+            <a href="/reserve/search?search_area=京都">
+              <img src="/assets/img_kyoto">
+            </a>
+          </div>
+          <div class="img_recomend">
+            <span>札幌</span>
+            <a href="/reserve/search?search_area=札幌">
+              <img src="/assets/img_sapporo">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
